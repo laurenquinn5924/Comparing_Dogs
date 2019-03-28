@@ -111,21 +111,79 @@ class Dogs extends React.Component {
 		]
 		return (
 			<div>
-				
-					{dogInfo.map(function(dog) {
-						return (
-							<div className="DogInfoCard">
-							
-								<h3>{dog.breedName}</h3>
-								<p>Class: {dog.class}</p>
-								<p><h4>Coat Colors: </h4>{dog.colors.map(function(color) {
-									return (<p>{color}</p>)
-								})}</p>
-							</div>
-						)
-
-						
+				<div id="classCard1" class="classCard">
+					<h3>Working Class:</h3>
+					{dogInfo.filter(function(dog) {
+						return dog.class === 'Working'
+					}).map(function(dog) {
+						return <p>{dog.breedName}</p>
 					})}
+				</div>
+				<div id="classCard2" class="classCard">
+					<h3>Toy Class:</h3>
+					{dogInfo.filter(function(dog) {
+						return dog.class === 'Toy'
+					}).map(function(dog) {
+						return <p>{dog.breedName}</p>
+					})}
+				</div>
+				 <div id="classCard3" class="classCard">
+					<h3>Sporting Class:</h3>
+					{dogInfo.filter(function(dog) {
+						return dog.class === 'Sporting'
+					}).map(function(dog) {
+						return <p>{dog.breedName}</p>
+					})}
+				</div>
+				<div id="classCard4" class="classCard">
+					<h3>Non-Sporting Class:</h3>
+					{dogInfo.filter(function(dog) {
+						return dog.class === 'Non-Sporting'
+					}).map(function(dog) {
+						return <p>{dog.breedName}</p>
+					})}
+				</div>
+				<div id="classCard5" class="classCard">
+					<h3>Terrier Class:</h3>
+					{dogInfo.filter(function(dog) {
+						return dog.class === 'Terrier'
+					}).map(function(dog) {
+						return <p>{dog.breedName}</p>
+					})}
+				</div>
+				<div id="classCard6" class="classCard">
+					<h3>Hound Class:</h3>
+					{dogInfo.filter(function(dog) {
+						return dog.class === 'Hound'
+					}).map(function(dog) {
+						return <p>{dog.breedName}</p>
+					})}
+				</div>
+				<div id="classCard7" class="classCard">
+					<h3>Herding Class:</h3>
+					{dogInfo.filter(function(dog) {
+						return dog.class === 'Herding'
+					}).map(function(dog) {
+						return <p>{dog.breedName}</p>
+					})}
+				</div>
+				
+				
+
+				{dogInfo.map(function(dog) {
+					return (
+						<div className="DogInfoCard">
+						
+							<h3>{dog.breedName}</h3>
+							<p>Class: {dog.class}</p>
+							<p><h4>Coat Colors: </h4>{dog.colors.map(function(color) {
+								return (<p>{color}</p>)
+							})}</p>
+						</div>
+					)
+
+					
+				})}
 				
 			</div>
 		)

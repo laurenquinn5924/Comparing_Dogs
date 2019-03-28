@@ -1,3 +1,38 @@
 .DogInfoCard {
 	border: 1px solid #EC37AA;
 }
+
+.classCard {
+	width: 200px;
+	text-align: center;
+	border: 3px solid #99e6ff;
+	display: inline-block;
+	
+}
+
+#classCard1 {
+	border: 3px solid #ffff1a;
+}
+
+#classCard2 {
+	border: 3px solid #00802b;
+}
+#classCard3 {
+	border: 3px solid #4dffff;
+}
+
+#classCard4 {
+	border: 3px solid #9966ff;
+}
+
+#classCard5 {
+	border: 3px solid #ff6699;
+}
+
+#classCard6 {
+	border: 3px solid #3366cc;
+}
+
+#classCard7 {
+	border: 3px solid #ff751a
+}
