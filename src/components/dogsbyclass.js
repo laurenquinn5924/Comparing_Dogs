@@ -1,14 +1,12 @@
 import React from 'react';
-import './dogs.css';
 import dobie from '../assets/images/dobieEdit.jpg';
-import DogsByClass from './dogsbyclass';
+import './dogs.css';
 
-class Dogs extends React.Component {
-
+class DogsByClass extends React.Component {
 	render() {
 		const dogInfo = [
 			{
-				breedName: 'Doberman',
+				breedName: 'Doberman Pinscher',
 				class: 'Working',
 				colors: ['Black & Rust', 'Red & Rust'],
 				image: dobie,
@@ -112,18 +110,17 @@ class Dogs extends React.Component {
 			}
 
 		]
-		
 		return (
+
 			<div>
-				<DogsByClass />
 				<div id="classCard1" class="classCard">
-					<h3>Working Class:</h3>
-					{dogInfo.filter(function(dog) {
-						return dog.class === 'Working'
-					}).map(function(dog) {
-						return <p>{dog.breedName}</p>
-					})}
-				</div>
+						<h3>Working Class:</h3>
+						{dogInfo.filter(function(dog) {
+							return dog.class === 'Working'
+						}).map(function(dog) {
+							return <p>{dog.breedName}</p>
+						})}
+					</div>
 				<div id="classCard2" class="classCard">
 					<h3>Toy Class:</h3>
 					{dogInfo.filter(function(dog) {
@@ -165,44 +162,22 @@ class Dogs extends React.Component {
 					})}
 				</div>
 				<div id="classCard7" class="classCard">
-					<h3>Herding Class:</h3>
-					{dogInfo.filter(function(dog) {
-						return dog.class === 'Herding'
-					}).map(function(dog) {
-						return (<div>
-							<p>{dog.breedName}</p>
-							<p><h4>Coat Colors: </h4>{dog.colors.map(function(color) {
-								return (<p>{color}</p>)
-							})}</p>
-							</div>)
-						
-					})}
-				</div>
-				
-				
-
-				{dogInfo.map(function(dog) {
-					return (
-						<div className="DogInfoCard">
-							<img  className="image_props" src={dog.image} alt={dog.alt} />
-							<h3>{dog.breedName}</h3>
-							<p>Class: {dog.class}</p>
-							<p><h4>Coat Colors: </h4>{dog.colors.map(function(color) {
-								return (<p>{color}</p>)
-							})}</p>
-						</div>
-					)
-
-					
-				})}
-				
+						<h3>Herding Class:</h3>
+						{dogInfo.filter(function(dog) {
+							return dog.class === 'Herding'
+						}).map(function(dog) {
+							return (<div>
+								<p>{dog.breedName}</p>
+								<p><h4>Coat Colors: </h4>{dog.colors.map(function(color) {
+									return (<p>{color}</p>)
+								})}</p>
+								</div>)
+							
+						})}
+					</div>
 			</div>
 		)
 	}
 }
 
-export default Dogs;
-
-
-
-// const dogList = ['Doberman', 'Cavalier King Charles Spaniel', 'Golden Retriever', 'Gordon Setter', 'Schnauzer', 'German Shepard', 'Cumberland Spaniel', 'Havanese', 'Japanese Chin', 'American Alsatian', 'Newfoundland', 'Bernese Mountain Dog', 'Swiss Mountain Dog', 'Australian Cattle Dog', 'Australian Shepard', 'Bloodhound']
+export default DogsByClass;
