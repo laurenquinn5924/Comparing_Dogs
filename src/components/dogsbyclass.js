@@ -1,5 +1,18 @@
 import React from 'react';
 import dobie from '../assets/images/dobieEdit.jpg';
+import tibetanMastiff from '../assets/images/tibetanMastiff.jpg';
+import greatDane from '../assets/images/greatDane.jpg';
+import italianGrayhound from '../assets/images/italianGrayhound.jpg';
+import papillon from '../assets/images/papillon.jpg';
+import poodle from '../assets/images/poodle.jpg';
+import dalmation from '../assets/images/dalmation.jpg';
+import australianShepherd from '../assets/images/aussie.jpg';
+import germanShepherd from '../assets/images/germanShepherd.jpg';
+import cardiganWelshCorgi from '../assets/images/cardiganWelshCorgi.jpg';
+import bassetHound from '../assets/images/bassetHound.jpg';
+import norwegianElkhound from '../assets/images/norwegianElkhound.jpg';
+import goldenRetriever from '../assets/images/goldenRetriever.jpg';
+import toller from '../assets/images/toller.jpg';
 import './dogs.css';
 
 class DogsByClass extends React.Component {
@@ -16,12 +29,16 @@ class DogsByClass extends React.Component {
 			{
 				breedName: 'Tibetan Mastiff',
 				class: 'Working',
-				colors: ['Black', 'Black & Tan', 'Blue Gray', 'Blue Gray & Tan', 'Brown', 'Brown & Tan', 'Red Gold', 'Red Gold Sable']
+				colors: ['Black', 'Black & Tan', 'Blue Gray', 'Blue Gray & Tan', 'Brown', 'Brown & Tan', 'Red Gold', 'Red Gold Sable'],
+				image: tibetanMastiff,
+				alt: 'Black and Tan Tibetan Mastiff'
 			},
 			{
 				breedName: 'Great Dane',
 				class: 'Working',
-				colors: ['Black', 'Black & White', 'Blue', 'Brindle', 'Fawn', 'Harlequin', 'Mantle', 'Merle', 'White']
+				colors: ['Black', 'Black & White', 'Blue', 'Brindle', 'Fawn', 'Harlequin', 'Mantle', 'Merle', 'White'],
+				image: greatDane,
+				alt: 'Merle Great Dane'
 			},
 			{
 				breedName: 'Cavalier King Charles Spaniel',
@@ -31,57 +48,80 @@ class DogsByClass extends React.Component {
 			{
 				breedName: 'Italian Greyhound',
 				class: 'Toy',
-				colors: ['Black', 'Blue', 'Blue Fawn', 'Cream', 'Fawn', 'Red', 'Red Fawn', 'Sable', 'Seal']
+				colors: ['Black', 'Blue', 'Blue Fawn', 'Cream', 'Fawn', 'Red', 'Red Fawn', 'Sable', 'Seal'],
+				image: italianGrayhound,
+				alt: 'Fawn Italian Grayhound'
+				
 			},
 			{
 				breedName: 'Papillon',
 				class: 'Toy',
-				colors: ['White & Black', 'White & Lemon', 'White & Red', 'White & Sable', 'White Black & Tan']
+				colors: ['White & Black', 'White & Lemon', 'White & Red', 'White & Sable', 'White Black & Tan'],
+				image: papillon,
+				alt: 'White and Red Papillon'
 			},
 			{
 				breedName: 'Poodle',
 				class: 'Non-Sporting',
-				colors: ['Apricot', 'Black', 'Blue', 'Brown', 'Cream', 'Gray', 'Red', 'Silver', 'Silver Beige', 'White']
+				colors: ['Apricot', 'Black', 'Blue', 'Brown', 'Cream', 'Gray', 'Red', 'Silver', 'Silver Beige', 'White'],
+				image: poodle,
+				alt: 'Three colors of Standard Poodle. From left: Cream, Red, Gray'
 			},
 			{
 				breedName: 'Dalmatian',
 				class: 'Non-Sporting',
-				colors: ['White & Black', 'White & Liver Brown']
+				colors: ['White & Black', 'White & Liver Brown'],
+				image: dalmation,
+				alt: 'White and Liver Brown Dalmation. This dog has brown instead of the popular black spots.'
 			},
 			{
 				breedName: 'Australian Shepherd',
 				class: 'Herding',
-				colors: ['Tri-Color', 'Blue Merle', 'Red', 'Red Merle']
+				colors: ['Tri-Color', 'Blue Merle', 'Red', 'Red Merle'],
+				image: australianShepherd,
+				alt: 'Red Merle Australian Shepherd'
 			},
 			{
 				breedName: 'German Shepherd',
 				class: 'Herding',
-				colors: ['Bi-Color', 'Black', 'Black & Cream', 'Black & Red', 'Black & Silver', 'Black & Tan', 'Blue', 'Gray', 'Liver', 'Sable', 'White']
+				colors: ['Bi-Color', 'Black', 'Black & Cream', 'Black & Red', 'Black & Silver', 'Black & Tan', 'Blue', 'Gray', 'Liver', 'Sable', 'White'],
+				image: germanShepherd,
+				alt: 'Sable Long Haired German Shepherd'
 			},
 			{
 				breedName: 'Cardigan Welsh Corgi',
 				class: 'Herding',
-				colors: ['Black & White', 'Blue Merle & White', 'Brindle & White', 'Red & White', 'Sable & White']
+				colors: ['Black & White', 'Blue Merle & White', 'Brindle & White', 'Red & White', 'Sable & White'],
+				image: cardiganWelshCorgi,
+				alt: 'Blue Merle and White Cardigan Welsh Corgi'
 			},
 			{
 				breedName: 'Basset Hound',
 				class: 'Hound',
-				colors: ['Black & White', 'Blue Brown & White', 'Black Tan & White', 'Black White & Brown', 'Black White & Tan', 'Brown Black & White', 'Lemon & White', 'Mahogany & White', 'Red & White']
+				colors: ['Black & White', 'Blue Brown & White', 'Black Tan & White', 'Black White & Brown', 'Black White & Tan', 'Brown Black & White', 'Lemon & White', 'Mahogany & White', 'Red & White'],
+				image: bassetHound,
+				alt: 'Brown Black and White Basset Hound'
 			},
 			{
 				breedName: 'Norwegian Elkhound',
 				class: 'Hound',
-				colors: ['Black & Gray', 'Black & Silver', 'Black White & Silver', 'Gray & Black', 'Gray Black & Silver', 'Silver & Black', 'Silver Gray & Black']
+				colors: ['Black & Gray', 'Black & Silver', 'Black White & Silver', 'Gray & Black', 'Gray Black & Silver', 'Silver & Black', 'Silver Gray & Black'],
+				image: norwegianElkhound,
+				alt: 'Gray and Black Norwegian Elkhound'
 			},
 			{
 				breedName: 'Golden Retriever',
 				class: 'Sporting',
-				colors: ['Dark Golden', 'Golden', 'Light Golden']
+				colors: ['Dark Golden', 'Golden', 'Light Golden'],
+				image: goldenRetriever,
+				alt: 'Light Golden Retriever'
 			},
 			{
 				breedName: 'Nova Scotia Duck Tolling Retriever',
 				class: 'Sporting',
-				colors: ['Red', 'Red Gold']
+				colors: ['Red', 'Red Gold'],
+				image: toller,
+				alt: 'Nova Scotia Duck Tolling Retriever'
 			},
 			{
 				breedName: 'English Cocker Spaniel',
@@ -108,7 +148,6 @@ class DogsByClass extends React.Component {
 				class: 'Working',
 				colors: ['Black', 'Brown', 'Gray', 'White & Black']
 			}
-
 		]
 		return (
 
@@ -175,6 +214,22 @@ class DogsByClass extends React.Component {
 							
 						})}
 					</div>
+
+					{dogInfo.map(function(dog) {
+					return (
+						<div className="DogInfoCard">
+							<img  className="image_props" src={dog.image} alt={dog.alt} />
+							<h3>{dog.breedName}</h3>
+							<p>Class: {dog.class}</p>
+							<p>
+								<h4>AKC Official Coat Colors: </h4>
+								{dog.colors.map(function(color) {
+									return (<p>{color}</p>)
+								})}
+							</p>
+						</div>
+					)	
+				})}
 			</div>
 		)
 	}

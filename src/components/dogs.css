@@ -1,5 +1,8 @@
 .DogInfoCard {
 	border: 1px solid #EC37AA;
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .classCard {
@@ -7,7 +10,7 @@
 	text-align: center;
 	border: 3px solid #99e6ff;
 	display: inline-block;
-	
+	vertical-align: top;
 }
 
 #classCard1 {
