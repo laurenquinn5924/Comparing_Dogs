@@ -13,6 +13,12 @@ import bassetHound from '../assets/images/bassetHound.jpg';
 import norwegianElkhound from '../assets/images/norwegianElkhound.jpg';
 import goldenRetriever from '../assets/images/goldenRetriever.jpg';
 import toller from '../assets/images/toller.jpg';
+import cocker from '../assets/images/cocker.jpg';
+import cairnTerrier from '../assets/images/cairnTerrier.jpg';
+import russellTerrier from '../assets/images/russellTerrier.jpg';
+import berner from '../assets/images/berner.jpg';
+import newfie from '../assets/images/newfie.jpg';
+import cavalier from '../assets/images/cavalier.jpg';
 import './dogs.css';
 
 class DogsByClass extends React.Component {
@@ -43,7 +49,9 @@ class DogsByClass extends React.Component {
 			{
 				breedName: 'Cavalier King Charles Spaniel',
 				class: 'Toy',
-				colors: ['Blenheim', 'Black & Tan', 'Tri-Color', 'Ruby'] 
+				colors: ['Blenheim', 'Black & Tan', 'Tri-Color', 'Ruby'],
+				image: cavalier,
+				alt: 'Tri-Color Cavalier King Charles Spaniel'
 			},
 			{
 				breedName: 'Italian Greyhound',
@@ -126,31 +134,41 @@ class DogsByClass extends React.Component {
 			{
 				breedName: 'English Cocker Spaniel',
 				class: 'Sporting',
-				colors: ['Black', 'Black & Tan', 'Black & White', 'Black White & Tan', 'Blue Roan', 'Blue Roan & Tan', 'Golden', 'Lemon Roan', 'Liver', 'Liver & Tan', 'Liver & White', 'Liver Roan', 'Liver Roan & Tan', 'Liver White & Tan', 'Orange & White', 'Orange Roan', 'Red', 'Red Roan']
+				colors: ['Black', 'Black & Tan', 'Black & White', 'Black White & Tan', 'Blue Roan', 'Blue Roan & Tan', 'Golden', 'Lemon Roan', 'Liver', 'Liver & Tan', 'Liver & White', 'Liver Roan', 'Liver Roan & Tan', 'Liver White & Tan', 'Orange & White', 'Orange Roan', 'Red', 'Red Roan'],
+				image: cocker,
+				alt: 'Liver Roan English Cocker Spaniel'
 			},
 			{
 				breedName: 'Cairn Terrier',
 				class: 'Terrier',
-				colors: ['Black', 'Black Brindle', 'Brindle', 'Cream', 'Cream Brindle', 'Gray', 'Gray Brindle', 'Red', 'Red Brindle', 'Silver', 'Wheaten']
+				colors: ['Black', 'Black Brindle', 'Brindle', 'Cream', 'Cream Brindle', 'Gray', 'Gray Brindle', 'Red', 'Red Brindle', 'Silver', 'Wheaten'],
+				image: cairnTerrier,
+				alt: 'Red Brindle Cairn Terrier'
 			},
 			{
 				breedName: 'Russell Terrier',
 				class: 'Terrier',
-				colors: ['White']
+				colors: ['White'],
+				image: russellTerrier,
+				alt: 'White Russell Terrier with Tan Markings'
 			},
 			{
 				breedName: 'Bernese Mountain Dog',
 				class: 'Working',
-				colors: ['Black Rust & White', 'Black Tan & White']
+				colors: ['Black Rust & White', 'Black Tan & White'],
+				image: berner,
+				alt: 'Bernese Mountain Dog'
 			},
 			{
 				breedName: 'Newfoundland',
 				class: 'Working',
-				colors: ['Black', 'Brown', 'Gray', 'White & Black']
+				colors: ['Black', 'Brown', 'Gray', 'White & Black'],
+				image: newfie,
+				alt: 'Two Newfoundland Dogs showing off the black and brown coats.'
 			}
 		]
+		
 		return (
-
 			<div>
 				<div id="classCard1" class="classCard">
 						<h3>Working Class:</h3>
@@ -206,7 +224,9 @@ class DogsByClass extends React.Component {
 							return dog.class === 'Herding'
 						}).map(function(dog) {
 							return (<div>
-								<p>{dog.breedName}</p>
+								<p className="dog_breed_name">{dog.breedName}</p>
+								<img  className="image_props" src={dog.image} alt={dog.alt} />
+								<p className="image_caption">Image: {dog.alt}</p>
 								<p><h4>Coat Colors: </h4>{dog.colors.map(function(color) {
 									return (<p>{color}</p>)
 								})}</p>
@@ -218,8 +238,9 @@ class DogsByClass extends React.Component {
 					{dogInfo.map(function(dog) {
 					return (
 						<div className="DogInfoCard">
+						<h3>{dog.breedName}</h3>
 							<img  className="image_props" src={dog.image} alt={dog.alt} />
-							<h3>{dog.breedName}</h3>
+							<p className="image_caption">Image: {dog.alt}</p>
 							<p>Class: {dog.class}</p>
 							<p>
 								<h4>AKC Official Coat Colors: </h4>

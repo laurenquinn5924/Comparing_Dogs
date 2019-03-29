@@ -43,3 +43,11 @@
 .image_props {
 	width: 200px;
 }
+
+.image_caption {
+	font-size: 10px;
+}
+
+.dog_breed_name {
+	font-size: 20px;
+}
