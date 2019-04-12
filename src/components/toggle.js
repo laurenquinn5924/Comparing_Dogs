@@ -1,7 +1,5 @@
 import React from 'react';
-import './dogs.css';
-import DogsByClass from './DogsByClass';
-import Toggle from '../'
+//import TestDogs from './TestDogs';
 
 import dobie from '../assets/images/dobieEdit.jpg';
 import tibetanMastiff from '../assets/images/tibetanMastiff.jpg';
@@ -24,8 +22,21 @@ import berner from '../assets/images/berner.jpg';
 import newfie from '../assets/images/newfie.jpg';
 import cavalier from '../assets/images/cavalier.jpg';
 
-class Dogs extends React.Component {
-	render() {	
+class Toggle extends React.Component {
+	state = {
+		on: false
+	}
+
+	
+
+toggle = () => {
+	console.log(this.state)
+	this.setState({
+		on: !this.state.on
+	});
+}
+
+	render() {
 		const dogInfo = [
 			{
 				breedName: 'Doberman Pinscher',
@@ -169,14 +180,19 @@ class Dogs extends React.Component {
 				image: newfie,
 				alt: 'Two Newfoundland Dogs showing off the black and brown coats.'
 			}
-		]	
+		]
 		return (
 			<div>
-					<DogsByClass dogInfo={dogInfo}/>
+				{this.state.on && <h1>Toggle on!</h1>}
+				<button onClick={this.toggle}>{dogInfo.map(function(dog) {
+					return <p>{dog.breedName}</p>
+				})}</button>
+				
+				
+			
 			</div>
 		)
 	}
 }
-export default Dogs;
 
-//<DogsByClass dogInfo={dogInfo}/>
+export default Toggle;

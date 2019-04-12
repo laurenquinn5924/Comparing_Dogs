@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import Dogs from './components/dogs';
+import Dogs from './components/Dogs'
 
-class App extends Component {
+
+
+
+class App extends React.Component {
   render() {
     return (
       <div className="App">
