@@ -2,41 +2,30 @@ import React from 'react';
 import './dogs.css';
 
 class DogsByClass extends React.Component {
-	// state = {
-	// 	on: false
-	// }
-	// constructor(props) {
-	// 	super(props)
-	// 	this.state = {
-	// 		on: false
-	// 	}
-	// 	//this.isHidden = this.isHidden.bind(this);
-	// }
-
-	// toggle = () => {
-	// 	console.log(this.state)
-	// 	this.setState({
-	// 		on: !this.state.on
-	// 	})
-		
-	// }
 
 	render() {
 		const { dogInfo } = this.props;
 		return (
 			<div>
+				<div>
+					<button onClick={this.props.handleToggle}>Here!</button>
+					{this.props.dogInfo.breedName}
+					<button onClick={this.handleToggle}>Click Me!</button>
+					{this.props.dogInfo.breedName}
+				</div>
+				
 				<div id="classCard1" className="classCard">
 					<h3>Working Class:</h3>
-					<button onClick={this.toggle}>
+					
 						{dogInfo.filter(function(dog) {
 						return dog.class === 'Working'
 					}).map(function(dog) {
 						return <p>{dog.breedName}</p>
 					})}
-					</button>
+					
 				</div>
 
-				<div id="classCard2" class="classCard">
+				<div id="classCard2" className="classCard">
 					<h3>Toy Class:</h3>
 					{dogInfo.filter(function(dog) {
 						return dog.class === 'Toy'
@@ -44,7 +33,8 @@ class DogsByClass extends React.Component {
 						return <p>{dog.breedName}</p>
 					})}
 				</div>
-				<div id="classCard3" class="classCard">
+
+				<div id="classCard3" className="classCard">
 					<h3>Sporting Class:</h3>
 					{dogInfo.filter(function(dog) {
 						return dog.class === 'Sporting'
@@ -52,7 +42,8 @@ class DogsByClass extends React.Component {
 						return <p>{dog.breedName}</p>
 					})}
 				</div>
-				<div id="classCard4" class="classCard">
+
+				<div id="classCard4" className="classCard">
 					<h3>Non-Sporting Class:</h3>
 					{dogInfo.filter(function(dog) {
 						return dog.class === 'Non-Sporting'
@@ -60,7 +51,8 @@ class DogsByClass extends React.Component {
 						return <p>{dog.breedName}</p>
 					})}
 				</div>
-				<div id="classCard5" class="classCard">
+
+				<div id="classCard5" className="classCard">
 					<h3>Terrier Class:</h3>
 					{dogInfo.filter(function(dog) {
 						return dog.class === 'Terrier'
@@ -68,7 +60,8 @@ class DogsByClass extends React.Component {
 						return <p>{dog.breedName}</p>
 					})}
 				</div>
-				<div id="classCard6" class="classCard">
+
+				<div id="classCard6" className="classCard">
 					<h3>Hound Class:</h3>
 					{dogInfo.filter(function(dog) {
 						return dog.class === 'Hound'
@@ -76,7 +69,8 @@ class DogsByClass extends React.Component {
 						return <p>{dog.breedName}</p>
 					})}
 				</div>
-				<div id="classCard7" class="classCard">
+
+				<div id="classCard7" className="classCard">
 						<h3>Herding Class:</h3>
 						{dogInfo.filter(function(dog) {
 							return dog.class === 'Herding'
@@ -88,8 +82,7 @@ class DogsByClass extends React.Component {
 								<p><h4>Coat Colors: </h4>{dog.colors.map(function(color) {
 									return (<p>{color}</p>)
 								})}</p>
-								</div>)
-							
+							</div>)					
 						})}
 					</div>
 
@@ -115,3 +108,10 @@ class DogsByClass extends React.Component {
 }
 
 export default DogsByClass;
+
+// handleToggle(e) {
+// 		this.props.dogInfo
+// 		// const dog = e.target.value
+// 		// this.props.onClick(dog)
+// 		// console.log('handleToggle')
+// 	}
