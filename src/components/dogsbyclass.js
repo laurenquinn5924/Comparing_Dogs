@@ -2,6 +2,17 @@ import React from 'react';
 import './dogs.css';
 
 class DogsByClass extends React.Component {
+	state = {
+		show: false
+	};
+
+	handleClick = () => {
+		this.setState(prevState => {
+			return {
+				show: !prevState.show
+			};
+		});
+	};
 
 	render() {
 		const { dogInfo } = this.props;

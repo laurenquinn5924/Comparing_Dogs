@@ -1,6 +1,6 @@
 import React from 'react';
+
 import DogList from './DogList';
-import DogsByClass from './DogsByClass';
 import './dogs.css';
 
 
@@ -245,12 +245,13 @@ class Dogs extends React.Component {
       <div className="App">
 				<div className='wrapper'>
 					<div className='dogs'>
+						
+
 						<DogList 
 							title='Click on the breed name to find out more!'
 							breedInfo={this.state.dogInfo}
 							toggleItem={this.toggleSelected}
 						/>
-						<DogsByClass dogInfo={this.state.dogInfo} />
 					</div>
 				</div>
       </div>
